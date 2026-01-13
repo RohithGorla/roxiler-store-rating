@@ -16,6 +16,9 @@ app.use("/api/admin", adminRoutes)
 app.use("/api/user", userRoutes)
 app.use("/api/owner", ownerRoutes)
 
-app.listen(5000,()=>{
- console.log("Server running on port 5000")
-})
+aconst PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
